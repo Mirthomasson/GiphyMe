@@ -1,7 +1,7 @@
 import React, {useEffect, useState} from 'react';
 import axios from "axios";
 import Loader from './Loader';
-import Pages from './Pages';
+import Paginate from './Paginate';
 
 /* eslint-disable */
 const Giphy = () => {
@@ -122,7 +122,7 @@ const Giphy = () => {
             <div className="container gifs">
                 {renderGifs()}
             </div>
-            <Pages
+            <Paginate
                 pageSelected={pageSelected}
                 currentPage={currentPage}
                 itemsPerPage={itemsPerPage}
