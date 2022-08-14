@@ -1,54 +1,30 @@
-import React from 'react';
-import './App.css';
+import React, {useEffect, useState} from 'react';
+import Giphy from './components/Giphy';
+import axios from "axios";
 
-function App() {
+const App = () => {
+  
+  const [data, setData] = useState([])
+    useEffect(() => {
+      const fetchData = async () => {
+        const results = await axios("https://api.giphy.com/v1/gifs/trending", {
+          params:{
+            api_key: "ltZmwuuZiiV2i2e5mfUfKDMyEcY89FWB"
+          }
+        });
+
+        console.log(results);
+        setData(results.data.data);
+      }
+
+      fetchData()
+    }, []);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <span>
-          <span>Learn </span>
-          <a
-            className="App-link"
-            href="https://reactjs.org/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            React
-          </a>
-          <span>, </span>
-          <a
-            className="App-link"
-            href="https://redux.js.org/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Redux
-          </a>
-          <span>, </span>
-          <a
-            className="App-link"
-            href="https://redux-toolkit.js.org/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Redux Toolkit
-          </a>
-          ,<span> and </span>
-          <a
-            className="App-link"
-            href="https://react-redux.js.org/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            React Redux
-          </a>
-        </span>
-      </header>
+  <div>
+    <Giphy />
     </div>
   );
-}
+};
 
 export default App;
