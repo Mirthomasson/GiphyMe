@@ -33,9 +33,9 @@ input.form-control {
 button.btn {
     background-color: #FF06B7;
     font-weight: 500;
-	border: none;
-	cursor: pointer;
-	outline: inherit;
+	  border: none;
+	  cursor: pointer;
+	  outline: inherit;
     transition: ease 0.2s;
     display: flex;
     margin: 0 auto;
@@ -75,7 +75,8 @@ nav {
   }
   
   .gif {
-    padding: 0 2px;
+    padding: 0 auto;
+    flex-shrink: 1;
   }
 
 .loader {
@@ -86,3 +87,15 @@ nav {
     background-color: #FF06B7;
     border: none;
 }
+
+
+@media only screen and (max-width: 1024px) {
+  input.form-control {
+    width: 80%;
+  }
+
+  button.btn {
+    width: 30%;
+  }
+}
+
