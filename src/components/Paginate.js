@@ -3,7 +3,7 @@ import React from "react";
 
 const Paginate = props => {
   const pageNumbers = [];
-
+  
   for (let i = 1; i <= Math.ceil(props.totalItems / props.itemsPerPage); i++) {
     pageNumbers.push(i);
   }
@@ -19,7 +19,7 @@ const Paginate = props => {
 
           return (
             // eslint-disable-next-line react/jsx-no-comment-textnodes
-            <li className={classes}>
+            <li key={number} className={classes}>
               <a
                 onClick={() => props.pageSelected(number)}
                 href="#"
