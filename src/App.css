@@ -81,7 +81,6 @@ img {
   .gif {
     padding: 0 auto;
     flex-shrink: 1;
-    cursor: pointer;
     transition: ease 0.2s;
   }
 
