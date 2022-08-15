@@ -2,6 +2,7 @@ import React, {useEffect, useState} from 'react';
 import axios from "axios";
 import Loader from './Loader';
 import Paginate from './Paginate';
+import gif from './PoweredBy_200_Horizontal_Light-Backgrounds_With_Logo.gif'
 
 /* eslint-disable */
 const Giphy = () => {
@@ -128,6 +129,9 @@ const Giphy = () => {
                 itemsPerPage={itemsPerPage}
                 totalItems={data.length} />
         </div>
+        <footer>
+        <a href="https://giphy.com/" target="_blank"><img className="brand-logo" src={gif} alt="brand logo" /></a>
+        </footer>
         </>
     );
 };

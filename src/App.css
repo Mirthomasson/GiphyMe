@@ -88,6 +88,20 @@ nav {
     border: none;
 }
 
+.brand-logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  margin-top: 10em;
+  cursor: pointer;
+}
+
+footer {
+  width: 100%;
+  height: 2.75em;
+  background-color: black;
+}
 
 @media only screen and (max-width: 1024px) {
   input.form-control {
