@@ -63,6 +63,10 @@ nav {
     margin: 0 auto;
 }
 
+img {
+  border-radius: 8px;
+}
+
 .gifs {
     margin: 0 auto;
     width: 80%;
@@ -77,6 +81,13 @@ nav {
   .gif {
     padding: 0 auto;
     flex-shrink: 1;
+    cursor: pointer;
+    transition: ease 0.2s;
+  }
+
+  .gif:hover {
+    opacity: 0.8;
+    transition: ease 0.2s;
   }
 
 .loader {
