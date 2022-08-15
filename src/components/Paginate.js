@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/anchor-is-valid */
 import React from "react";
 
 const Paginate = props => {
@@ -17,10 +18,11 @@ const Paginate = props => {
           }
 
           return (
+            // eslint-disable-next-line react/jsx-no-comment-textnodes
             <li className={classes}>
               <a
                 onClick={() => props.pageSelected(number)}
-                href="!#"
+                href="#"
                 className="page-link"
               >
                 {number}
