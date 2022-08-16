@@ -54,9 +54,11 @@ const Giphy = () => {
         }
         return currentItems.map(el => {
             return (
+                <a href={el.url} target="_blank">
                 <div key={el.id} className="gif">
                     <img src={el.images.fixed_height.url} alt="Gif"/>
                 </div>
+                </a>
             );
         });
     };
